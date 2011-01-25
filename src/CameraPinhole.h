@@ -22,7 +22,7 @@ protected:
 
 namespace cinder {
 
-class CameraPinhole : public CameraPersp
+class CameraPinhole : public Camera
 {
 
 public:

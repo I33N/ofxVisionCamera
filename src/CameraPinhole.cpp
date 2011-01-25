@@ -14,25 +14,25 @@ OCVCamPinhole::OCVCamPinhole(const std::string matIntrinsicFile, const std::stri
 namespace cinder{
 
 CameraPinhole::CameraPinhole() :
-	CameraPersp()
+	Camera()
 {
 
 }
 
 CameraPinhole::CameraPinhole( int pixelWidth, int pixelHeight, float pixelFocal) :
-	CameraPersp()
+	Camera()
 {
 	setPerspective( pixelWidth, pixelHeight, pixelFocal, pixelFocal, pixelWidth/2.0f, pixelHeight/2.0f, 0.0f);
 }
 
 CameraPinhole::CameraPinhole( int pixelWidth, int pixelHeight, float alphaU, float alphaV, float centerU, float centerV, float ditortionC) :
-	CameraPersp()
+	Camera()
 {
 	setPerspective( pixelWidth, pixelHeight, alphaU, alphaV, centerU, centerV, ditortionC);
 }
 
 CameraPinhole::CameraPinhole( int pixelWidth, int pixelHeight, Matrix44f matIntrinsic, Matrix44f matExtrinsic) :
-	CameraPersp()
+	Camera()
 {
 	setPerspective( pixelWidth, pixelHeight, matIntrinsic[0,0], matIntrinsic[1,1], matIntrinsic[0,2], matIntrinsic[1,2], matIntrinsic[0,1]);
 
